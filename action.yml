@@ -1,0 +1,12 @@
+name: 'Get last tag'
+description: 'Find the last published tag on the right'
+inputs:
+  github-token:
+    description: 'GitHub token'
+    required: true
+outputs:
+  version:
+    description: 'the result will be printed here'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
