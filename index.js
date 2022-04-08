@@ -14,7 +14,7 @@ async function run(){
 
 async function findTag(){
     let param = {
-        owner: github.context.actor,
+        owner: github.context.payload.repository.owner.name,
         repo: github.context.payload.repository.name
     }
     await octokit.request('GET /repos/{owner}/{repo}/git/refs/tags', param).then((res)=>{
